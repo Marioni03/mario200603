@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teclado</title>
+  <style>
+    .teclado {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #ccc;
+      width: 900px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    .div-click {
+      width: 50px;
+      height: 50px;
+      background-color: #ccc;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #miImagen {
+      position: absolute;
+      top: 100%;
+      left: 30%;
+      width: 50%;
+      height: 50%;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>teclado</h1>
+
+  <div class="teclado">
+    <div id="miDiv1" class="div-click">1</div>
+    <div id="miDiv2" class="div-click">2</div>
+    <div id="miDiv3" class="div-click">3</div>
+    <div id="miDiv4" class="div-click">4</div>
+    <div id="miDiv5" class="div-click">5</div>
+    <div id="miDiv6" class="div-click">6</div>
+    <div id="miDiv7" class="div-click">7</div>
+    <div id="miDiv8" class="div-click">8</div>
+
+    <div id="miDiv9" class="div-click">9</div>
+    <div id="miDiv10" class="div-click">0</div>
+    <div id="miDiv11" class="div-click">Q</div>
+    <div id="miDiv12" class="div-click">W</div>
+    <div id="miDiv13" class="div-click">E</div>
+    <div id="miDiv14" class="div-click">R</div>
+    <div id="miDiv15" class="div-click">T</div>
+    <div id="miDiv16" class="div-click">Y</div>
+
+    <div id="miDiv17" class="div-click">U</div>
+    <div id="miDiv18" class="div-click">I</div>
+    <div id="miDiv19" class="div-click">O</div>
+    <div id="miDiv20" class="div-click">P</div>
+    <div id="miDiv21" class="div-click">A</div>
+    <div id="miDiv22" class="div-click">S</div>
+    <div id="miDiv23" class="div-click">D</div>
+    <div id="miDiv24" class="div-click">F</div>
+
+    <div id="miDiv25" class="div-click">G</div>
+    <div id="miDiv26" class="div-click">H</div>
+    <div id="miDiv27" class="div-click">J</div>
+    <div id="miDiv28" class="div-click">K</div>
+    <div id="miDiv29" class="div-click">L</div>
+    <div id="miDiv30" class="div-click">Z</div>
+    <div id="miDiv31" class="div-click">X</div>
+    <div id="miDiv32" class="div-click">C</div>
+
+    <div id="miDiv33" class="div-click">V</div>
+    <div id="miDiv34" class="div-click">B</div>
+    <div id="miDiv35" class="div-click">N</div>
+    <div id="miDiv36" class="div-click">M</div>
+    <div id="miDiv37" class="div-click">,</div>
+    <div id="miDiv38" class="div-click">.</div>
+
+    
+    <img id="miImagen" src="imagenes/A_l.png" alt="Imagen" >
+  </div>
+
+  <script>
+    const miDivs = document.querySelectorAll('.div-click');
+    const miImagen = document.getElementById('miImagen');
+
+    const imagenes = {
+      'miDiv1': 'imagenes/1.png',
+      'miDiv2': 'imagenes/2.png',
+      'miDiv3': 'imagenes/3.png',
+      'miDiv4': 'imagenes/4.png',
+      'miDiv5': 'imagenes/5.png',
+      'miDiv6': 'imagenes/6.png',
+      'miDiv7': 'imagenes/7.png',
+      'miDiv8': 'imagenes/8.png',
+      'miDiv9': 'imagenes/9.png',
+      'miDiv10': 'imagenes/0.png',
+      'miDiv11': 'imagenes/Q.jpg',
+      'miDiv12': 'imagenes/W.jpg',
+      'miDiv13': 'imagenes/E.png',
+      'miDiv14': 'imagenes/R.jpg',
+      'miDiv15': 'imagenes/T.jpg',
+      'miDiv16': 'imagenes/Y.jpg',
+      'miDiv17': 'imagenes/U.jpg',
+      'miDiv18': 'imagenes/I.jpg',
+      'miDiv19': 'imagenes/O.jpg',
+      'miDiv20': 'imagenes/P.jpg',
+      'miDiv21': 'imagenes/A_l.png',
+      'miDiv22': 'imagenes/S.jpg',
+      'miDiv23': 'imagenes/D.png',
+      'miDiv24': 'imagenes/F.jpg',
+      'miDiv25': 'imagenes/G.jpg',
+      'miDiv26': 'imagenes/H.jpg',
+      'miDiv27': 'imagenes/J.jpg',
+      'miDiv28': 'imagenes/K.jpg',
+      'miDiv29': 'imagenes/L.jpg',
+      'miDiv30': 'imagenes/Z.jpg',
+      'miDiv31': 'imagenes/X.jpg',
+      'miDiv32': 'imagenes/C.png',
+      'miDiv33': 'imagenes/V.jpg',
+      'miDiv34': 'imagenes/B.png',
+      'miDiv35': 'imagenes/N.jpg',
+      'miDiv36': 'imagenes/M.jpg',
+      'miDiv37': 'imagenes/COMA.png',
+      'miDiv38': 'imagenes/PUNTO.png',
+    };
+
+    for (const miDiv of miDivs) {
+      miDiv.addEventListener('click', () => {
+        const divId = miDiv.id;
+        const imagenURL = imagenes[divId];
+        if (imagenURL) {
+          miImagen.src = imagenURL;
+          miImagen.style.display = 'block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
